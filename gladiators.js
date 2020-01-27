@@ -1,20 +1,16 @@
 
-//console.log(faker.name.LastName());
-
-function Gladiator() {
-    this.health  = 80;
-    this.originalHealth = 80;
-    this.power = generateNumber(2,5,1,1)[0];
-    this.speed = generateNumber(1,5,1,3)[0];
-    this.OriginalSpeed = this.speed
-    this.originalPower = this.power
-    this.name = generateName(7);
-    
-	 //this.firstName = faker.name.firstName();
-    //this.LastName = faker.name.LastName();
-    //this.name = firstName+' '+LastName ;
-
+class Gladiator {
+    constructor() {
+        this.health  = 80;
+        this.originalHealth = 80;
+        this.power = generateNumber(2,5,1,1)[0];
+        this.speed = generateNumber(1,5,1,3)[0];
+        this.OriginalSpeed = this.speed
+        this.originalPower = this.power
+        this.name = faker.name.firstName()+" "+faker.name.lastName();
+    }
 }
+
 
 
 
@@ -52,6 +48,12 @@ for (let i=0;i<gladNum;i++) {
 let temp='';
 
 let timer=0;
+
+
+
+gladiatorList.forEach((val,index)=> console.log(index+1+" - "+val.name));
+console.log("\n");
+
 
 while(gladiatorList.length > 1) {
 
