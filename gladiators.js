@@ -95,8 +95,8 @@ while(gladiatorList.length > 1) {
   
        	if (glad2.health > 0 && glad1.health > 0) {
         	attacker2 = attack(glad2,glad1);
-        	glad2=attacker1[0];
-        	glad1=attacker1[1];
+        	glad2=attacker2[0];
+        	glad1=attacker2[1];
         }
 
 
@@ -158,11 +158,11 @@ function generateName(namelength){
 function attack(person1,person2) {
 
     console.log('['+person1.name+' x '+person1.health.toFixed(1)+']'+' hits ['+person2.name+' x '+person2.health.toFixed(1)+'] with: \n speed:'+person1.speed.toFixed(3)+'\n power:'+person1.power.toFixed(3));        
-    person2.originalHealth = person2.health;
+    //person2.originalHealth = person2.health;
     person2.health = person2.health - person1.power*person1.speed;
-    person2.speed  = person2.speed*(person2.health/(person2.originalHealth));
+    person2.speed  = person2.OriginalSpeed*(person2.health/(person2.originalHealth));
 
-    if (person2.speed <= 0) {person2.speed = 0;}  
+
  
     if (person2.health <= 30 && person2.health > 0 ) {person2.speed = 3*person2.speed;}
  
@@ -170,9 +170,9 @@ function attack(person1,person2) {
         if (generateNumber(0,1,1,0)[0])  {
             
             person2.health = 50;
-            person2.originalHealth=50;
-            person2.speed = person2.OriginalSpeed/2
-            person2.power = person2.originalPower/2	 
+            //person2.originalHealth=50;
+            person2.speed = person2.OriginalSpeed *(50/80)
+            person2.power = person2.originalPower *(50/80)	 
             console.log("Ceasar shows: 👍 -->"+ person2.name+ " Lives!");
 
         }
