@@ -172,7 +172,7 @@ function attack(person1,person2) {
             person2.health = 50;
             //person2.originalHealth=50;
             person2.speed = person2.OriginalSpeed *(50/80)
-            person2.power = person2.originalPower *(50/80)	 
+            person2.power = person2.originalPower 	 
             console.log("Ceasar shows: 👍 -->"+ person2.name+ " Lives!");
 
         }
