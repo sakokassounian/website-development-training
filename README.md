@@ -1,4 +1,5 @@
 # gladiator
+This is a solution for a JavaSctipt exercise for a concept on creating an RPG
 
 
 ## task1.js and tasks2.js
