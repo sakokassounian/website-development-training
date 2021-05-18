@@ -1,5 +1,5 @@
 # gladiator
-This is a solution for a JavaSctipt exercise for a concept on creating an RPG
+This is a solution for a JavaSctipt exercise for a concept on creating an RPG which I completed regarding my training in Simply technologies
 
 
 ## task1.js and tasks2.js
